@@ -1,3 +1,13 @@
+var connect  = require('connect');
+var static = require('serve-static');
+
+var server = connect();
+
+
+server.use(  static(__dirname + '/src'));
+
+server.listen(3000);
+
 var livereload = require('livereload');
-var server = livereload.createServer();
-server.watch(__dirname + "/js");
+var lrserver = livereload.createServer();
+lrserver.watch(__dirname + "/src");
