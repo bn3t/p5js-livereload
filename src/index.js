@@ -1,12 +1,16 @@
-function setup() {
+import "p5";
+
+import "./style.css";
+
+window.setup = () => {
   createCanvas(windowWidth, windowHeight);
   frameRate(3);
-}
+};
 
-function draw() {
+window.draw = () => {
   background(156);
-}
+};
 
-function windowResized() {
+window.windowResized = () => {
   resizeCanvas(windowWidth, windowHeight);
-}
+};
